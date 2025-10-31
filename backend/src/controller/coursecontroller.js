@@ -3,10 +3,19 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma= new PrismaClient();
 export const getCoures = async (req, res) => {
-  const { id } = req.params;
+
 
   try {
-    const course = await prisma.course();
+ const course = await prisma.course.findMany({
+  include: {
+    modules: {
+      include: {
+        videos: true,
+      },
+    },
+  },
+});
+
 
     if (!course) return res.status(404).json({ message: "Course not found" });
 

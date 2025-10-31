@@ -1,5 +1,5 @@
 import express from "express";
-import { markVideoComplete } from "../controllers/videoController.js";
+import { markVideoComplete } from "../controller/vidoecontroller.js";
 
 const router = express.Router();
 

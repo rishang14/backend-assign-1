@@ -1,9 +1,9 @@
 import express from "express";
-import { getCourseById, updateCourseProgress } from "../controller/coursecontroller.js";
+import { getCoures, updateCourseProgress } from "../controller/coursecontroller.js";
 
 const router = express.Router();
 
-router.get("/", getCourseById);
-router.patch("/:id/progress", updateCourseProgress);
+router.get("/", getCoures);
+router.patch("/progress", updateCourseProgress);
 
 export default router;
