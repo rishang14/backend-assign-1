@@ -3,6 +3,6 @@ import { markVideoComplete } from "../controller/vidoecontroller.js";
 
 const router = express.Router();
 
-router.patch("/:videoId/complete", markVideoComplete);
+router.patch("/:moduleID/:videoId/complete", markVideoComplete);
 
 export default router;

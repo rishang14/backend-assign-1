@@ -19,7 +19,7 @@ model Course {
   id          Int       @id @default(autoincrement())
   course_name String
   duration    String
-  progress    Int       @default(0)
+  progress    Float       @default(0.0)
   modules     Module[]
 }
 

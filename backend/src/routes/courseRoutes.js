@@ -4,6 +4,6 @@ import { getCoures, updateCourseProgress } from "../controller/coursecontroller.
 const router = express.Router();
 
 router.get("/", getCoures);
-router.patch("/progress", updateCourseProgress);
+router.patch("/:courseId/:moduleId/progress", updateCourseProgress);
 
 export default router;
